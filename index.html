@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interlink — Move to Spain the Smart Way</title>
+    <meta name="description" content="Interlink helps you move to Spain smartly: admissions, visas, relocation, and consultations."/>
+    <link rel="icon" type="image/png" href="/images/interlink_logo_web.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --ink:#1f284a;
+        --violet:#6f59d9;
+        --sky:#eaf2ff;
+        --muted:#6b7280;
+        --ok:#0ea5e9;
+      }
+      * { box-sizing: border-box }
+      html,body,#root { height: 100% }
+      body {
+        margin:0;
+        font-family: Helvetica, Arial, sans-serif;
+        color: var(--ink);
+        background: white;
+      }
+      a { color: var(--violet); text-decoration: none }
+      .container { width: min(1200px, 92%); margin: 0 auto }
+      .btn {
+        display:inline-flex; align-items:center; gap:.5rem;
+        background: linear-gradient(135deg, var(--violet), #8c69ff);
+        color:#fff; padding:.9rem 1.2rem; border-radius:14px; font-weight:600;
+        border: none; cursor:pointer; transition: transform .15s ease, box-shadow .15s ease;
+        box-shadow: 0 8px 24px rgba(111,89,217,.25);
+      }
+      .btn:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(111,89,217,.35) }
+      .btn.secondary { background:#fff; color:var(--violet); border:1px solid #e5e7eb; box-shadow:none }
+      header.nav {
+        position:sticky; top:0; z-index:50; backdrop-filter: saturate(160%) blur(8px);
+        background: rgba(255,255,255,.75); border-bottom:1px solid rgba(0,0,0,.05)
+      }
+      header .inner { display:flex; align-items:center; justify-content:space-between; padding:.8rem 0 }
+      header nav a { margin: 0 .7rem; color:#111827 }
+      header nav a.active { color:var(--violet); font-weight:700 }
+      .hero {
+        background: radial-gradient(1200px 600px at 80% -20%, #dfe8ff 0%, transparent 55%),
+                    radial-gradient(900px 400px at -10% 20%, #f8f5ff 0%, transparent 60%);
+        padding: 5rem 0 3rem;
+      }
+      .grid { display:grid; gap: 2rem }
+      .grid-2 { grid-template-columns: 1.1fr .9fr }
+      .card {
+        border:1px solid #eef; border-radius:18px; padding:1.2rem;
+        background: #fff; box-shadow: 0 10px 30px rgba(31,40,74,.06);
+      }
+      footer { border-top:1px solid #eef; padding:2rem 0; color: var(--muted) }
+      .tag { font-size:.75rem; padding:.35rem .6rem; background:#f3f4f6; color:#374151; border-radius:999px; }
+      .kpi { display:flex; gap:2rem; margin-top:1.2rem }
+      .kpi div { font-weight:700; font-size:1.1rem }
+      .logo { display:flex; align-items:center; gap:.6rem; font-weight:800; letter-spacing:.4px }
+      .logo img { height:36px; width:auto }
+      .img-cover { width:100%; border-radius:16px; object-fit:cover; height:340px; }
+      .muted { color:var(--muted) }
+      .section { padding: 3.2rem 0 }
+      .list { padding-left: 1rem }
+      .list li { margin:.35rem 0 }
+      .notice { background: #f0f7ff; border:1px dashed #a5c2ff; padding:1rem; border-radius:12px; }
+      @media (max-width: 900px){
+        .grid-2 { grid-template-columns: 1fr }
+        .img-cover { height: 220px }
+        header nav { display:none }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

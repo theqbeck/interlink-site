@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="220" y1="350" x2="620" y2="470" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F1C3A"/>
+      <stop offset="1" stop-color="#7A5DB8"/>
+    </linearGradient>
+    <!-- Маски для прорезей в кольцах -->
+    <mask id="maskLeft">
+      <rect width="800" height="800" fill="white"/>
+      <!-- вырезаем маленький сегмент снизу слева -->
+      <path d="M270,570 A170 170 0 0 1 190,510" stroke="black" stroke-width="16" stroke-linecap="round"/>
+    </mask>
+    <mask id="maskRight">
+      <rect width="800" height="800" fill="white"/>
+      <!-- вырезаем маленький сегмент сверху справа -->
+      <path d="M635,330 A170 170 0 0 1 700,390" stroke="black" stroke-width="16" stroke-linecap="round"/>
+    </mask>
+    <style>
+      .word { font-family: 'Montserrat', 'Inter', 'Segoe UI', Arial, sans-serif;
+              font-weight: 700; letter-spacing: 3px; fill: #1A2140; }
+      .alt { fill: #20264B; }
+    </style>
+  </defs>
+
+  <!-- Левое кольцо -->
+  <circle cx="330" cy="430" r="170" fill="none" stroke="url(#g)" stroke-width="12"
+          stroke-linecap="round" mask="url(#maskLeft)"/>
+  <!-- Правое кольцо -->
+  <circle cx="540" cy="470" r="170" fill="none" stroke="url(#g)" stroke-width="12"
+          stroke-linecap="round" mask="url(#maskRight)"/>
+
+  <!-- Надпись INTERLINK (подбор по стилю, близко к оригиналу) -->
+  <g transform="translate(240,430)">
+    <text class="word" font-size="64" y="10">INTER</text>
+    <text class="word alt" font-size="64" x="198" y="10">LINK</text>
+  </g>
+</svg>
