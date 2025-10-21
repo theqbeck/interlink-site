@@ -146,6 +146,16 @@
     .list li { margin:.35rem 0 }
 
     .notice { background: #f0f7ff; border:1px dashed #a5c2ff; padding:1rem; border-radius:12px; }
+/* contact form */
+.contact { padding: 3.2rem 0; }
+.contact .grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.contact label { font-size:.9rem; color: var(--muted); display:block; margin-bottom:.35rem; }
+.contact input, .contact textarea {
+  width:100%; padding:.9rem 1rem; border:1px solid #e5e8ff; border-radius:12px;
+  font: inherit; color: var(--ink); background:#fff;
+}
+.contact input:focus, .contact textarea:focus { outline:none; border-color:#cfd5ff; box-shadow:0 0 0 3px #f1f3ff; }
+.contact .status { margin-top:.8rem; font-size:.95rem; }
 
     @media (max-width: 900px){
       .grid-2 { grid-template-columns: 1fr }
