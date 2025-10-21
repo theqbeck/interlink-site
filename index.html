@@ -25,22 +25,22 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization","WebSite"],
   "name": "Interlink",
   "url": "https://interlink-site-7tx6.vercel.app/",
   "logo": "/images/interlink_logo_web.png",
   "sameAs": [
-    "https://www.linkedin.com/",
-    "https://www.instagram.com/"
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "url": "https://interlink-site-7tx6.vercel.app/",
-  "name": "Interlink — Admissions, Visa & Relocation to Spain",
+    "https://www.instagram.com/interlink_world/",
+    "https://www.youtube.com/@Interlink_world",
+    "https://www.tiktok.com/@interlink_world"
+  ],
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+34 635 994 844",
+    "contactType": "customer support",
+    "areaServed": "ES",
+    "availableLanguage": ["en","ru","es"]
+  }],
   "potentialAction": {
     "@type": "SearchAction",
     "target": "https://interlink-site-7tx6.vercel.app/?q={search_term_string}",
@@ -48,6 +48,7 @@
   }
 }
 </script>
+
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -64,6 +65,15 @@
 <link rel="preload" as="image" href="/images/pexels-aleksandar-pasaric-1388030.jpg" imagesrcset="/images/pexels-aleksandar-pasaric-1388030.jpg 1200w" />
 
   <style>
+    .wa-fab{
+  position:fixed; right:16px; bottom:16px;
+  display:inline-grid; place-items:center;
+  width:52px; height:52px; border-radius:50%;
+  font-weight:800; color:#fff; text-decoration:none;
+  background:#25D366; box-shadow:0 10px 24px rgba(0,0,0,.18);
+}
+.wa-fab:hover{ transform:translateY(-2px); }
+
     html { scroll-behavior: smooth; }
 
     :root {
@@ -158,6 +168,19 @@
 }
 .contact input:focus, .contact textarea:focus { outline:none; border-color:#cfd5ff; box-shadow:0 0 0 3px #f1f3ff; }
 .contact .status { margin-top:.8rem; font-size:.95rem; }
+.site-footer { border-top:1px solid #eef; padding:2rem 0; color:var(--muted); }
+.site-footer .footer-top { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:.6rem; }
+.site-footer .footer-brand { color:var(--ink); }
+.site-footer .socials { display:flex; gap:1rem; flex-wrap:wrap; }
+.site-footer .socials a { color:var(--ink); font-weight:600; }
+.site-footer .socials a:hover { text-decoration:underline; }
+.site-footer .footer-contacts { display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; margin:.4rem 0 1rem; }
+.site-footer .footer-contacts a { color:var(--ink); }
+.site-footer .footer-copy { text-align:center; }
+@media (max-width:900px){
+  .site-footer .footer-top{ flex-direction:column; align-items:flex-start; }
+  .site-footer .footer-contacts{ justify-content:flex-start; }
+}
 
     @media (max-width: 900px){
       .grid-2 { grid-template-columns: 1fr }
@@ -182,7 +205,8 @@
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
       </nav>
-     <a class="btn" href="https://calendly.com/your-slug/30min" target="_blank" rel="noopener">Book 30 min</a>
+     <a class="btn" href="https://calendly.com/studyinterlink/30min" target="_blank" rel="noopener">Book 30 min</a>
+
 
     </div>
   </header>
@@ -327,12 +351,41 @@
 </section>
 
   <footer>
-    <footer>
-  © <span id="y"></span> Interlink ·
-  <a href="mailto:studyinterlink@gmail.com">studyinterlink@gmail.com</a>
+   <footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="/images/interlink_logo_web.svg" alt="INTERLINK logo" style="height:28px;vertical-align:middle;margin-right:.5rem">
+        <strong>Interlink</strong>
+      </div>
+
+      <nav class="socials" aria-label="Social links">
+        <a href="https://www.instagram.com/interlink_world/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@Interlink_world" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.tiktok.com/@interlink_world" target="_blank" rel="noopener">TikTok</a>
+      </nav>
+    </div>
+
+    <div class="footer-contacts">
+      <a href="mailto:studyinterlink@gmail.com">studyinterlink@gmail.com</a>
+      <span>·</span>
+      <a href="tel:+34635994844">+34 635 994 844</a>
+      <span>·</span>
+      <a href="https://wa.me/34635994844" target="_blank" rel="noopener">WhatsApp</a>
+      <span>·</span>
+      <a href="https://calendly.com/studyinterlink/30min" target="_blank" rel="noopener">Book 30 min</a>
+    </div>
+
+    <div class="footer-copy">
+      © <span id="y"></span> Interlink. All rights reserved.
+    </div>
+  </div>
 </footer>
 
-    © <span id="y"></span> Interlink. All rights reserved.
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
   </footer>
 
   <script>
@@ -363,6 +416,7 @@
     });
   })();
 </script>
+<a class="wa-fab" href="https://wa.me/34635994844" target="_blank" rel="noopener" aria-label="WhatsApp chat">WA</a>
 
 </body>
 </html>
