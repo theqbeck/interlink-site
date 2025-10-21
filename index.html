@@ -61,6 +61,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/images/pexels-aleksandar-pasaric-1388030.jpg" imagesrcset="/images/pexels-aleksandar-pasaric-1388030.jpg 1200w" />
 
   <style>
     html { scroll-behavior: smooth; }
@@ -119,6 +120,8 @@
       font-size:.75rem; padding:.35rem .6rem;
       background:#f3f4f6; color:#374151; border-radius:999px;
     }
+<img class="img-cover" src="/images/pexels-aleksandar-pasaric-1388030.jpg"
+     alt="Barcelona skyline" width="1200" height="800" decoding="async" />
 
     .hero__title { font-size: clamp(2.2rem, 4vw, 3.2rem); margin:.6rem 0 1.2rem; line-height:1.15; }
     .hero__subtitle { color: var(--muted); font-size:1.1rem; }
@@ -230,6 +233,98 @@
       <a class="btn secondary" href="#contact-form">Go to contact form ▸</a>
     </div>
   </section>
+<!-- CONTACT FORM -->
+<section id="contact-form" class="contact">
+  <div class="container">
+    <div class="card">
+      <h2 style="margin:0 0 .4rem">Tell us about your case</h2>
+      <p class="muted" style="margin:0 0 1rem">We’ll reply within 24 hours.</p>
+
+      <form id="fs-form" action="https://formspree.io/f/xdkwvwrq" method="POST" class="contact-form">
+        <div class="grid-2" style="margin-bottom:.9rem">
+          <div>
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required aria-label="Your name">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Email" required aria-label="Email">
+          </div>
+        </div>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tell us briefly about your case…" required aria-label="Message"></textarea>
+
+        <!-- honeypot (anti-spam) -->
+        <input type="text" name="_gotcha" style="display:none">
+
+        <!-- subject для удобства в почте -->
+        <input type="hidden" name="_subject" value="New website inquiry">
+
+        <div style="display:flex; gap:.8rem; align-items:center; margin-top:.9rem">
+          <button class="btn" type="submit">Send</button>
+          <span id="fs-status" class="status muted" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="container grid" style="grid-template-columns:repeat(3, 1fr)">
+    <div class="card">
+      <h3>Admissions</h3>
+      <ul class="list muted">
+        <li>Language schools, colleges, universities</li>
+        <li>Program selection & documents</li>
+        <li>Application & enrollment support</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Visa & Residence</h3>
+      <ul class="list muted">
+        <li>Student visa / NLV</li>
+        <li>Appointment & paperwork</li>
+        <li>Translation & apostille guidance</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Relocation</h3>
+      <ul class="list muted">
+        <li>NIE, padrón, bank account</li>
+        <li>Health insurance</li>
+        <li>Housing intro pack</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="section">
+  <div class="container card">
+    <h3>How it works</h3>
+    <ol class="list muted">
+      <li><strong>Free assessment:</strong> you tell us your situation.</li>
+      <li><strong>Plan:</strong> we map out documents, timeline, costs.</li>
+      <li><strong>Execution:</strong> we guide you step by step until arrival.</li>
+    </ol>
+    <a class="btn" href="#contact-form" style="margin-top:.6rem">Start with a free 15-min call</a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section">
+  <div class="container grid" style="grid-template-columns:1fr 1fr; gap:1rem">
+    <div class="card">
+      <p class="muted">“Clear guidance and fast replies. Got my student visa in time and moved to Barcelona stress-free.”</p>
+      <p><strong>— Maria S.</strong></p>
+    </div>
+    <div class="card">
+      <p class="muted">“They handled the paperwork end-to-end. I only had to show up at appointments.”</p>
+      <p><strong>— Ahmed K.</strong></p>
+    </div>
+  </div>
+</section>
 
   <footer>
     © <span id="y"></span> Interlink. All rights reserved.
@@ -238,5 +333,31 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
+  <script>
+  (function(){
+    const form = document.getElementById('fs-form');
+    const status = document.getElementById('fs-status');
+    if(!form) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = 'Sending…';
+
+      try {
+        const data = new FormData(form);
+        const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' }});
+        if (res.ok) {
+          form.reset();
+          status.textContent = 'Thanks! We will get back to you within 24h.';
+        } else {
+          status.textContent = 'Oops, something went wrong. Please try again or email us.';
+        }
+      } catch (err) {
+        status.textContent = 'Network error. Please try again.';
+      }
+    });
+  })();
+</script>
+
 </body>
 </html>
