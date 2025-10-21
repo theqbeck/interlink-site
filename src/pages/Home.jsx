@@ -66,6 +66,15 @@ export default function Home() {
           <h3>Contact us</h3>
           <p>We’ll reply within 24 hours.</p>
           <a className="link" href="/contact">Go to contact form →</a>
+          <form className="contact-form" action="https://formspree.io/f/xdkwvwrq" method="POST">
+  <div className="grid-2">
+    <input name="name" type="text" placeholder="Your name" required aria-label="Your name" />
+    <input name="email" type="email" placeholder="Email" required aria-label="Email" />
+  </div>
+  <textarea name="message" placeholder="Tell us briefly about your case…" rows="4" required aria-label="Message"></textarea>
+  <button className="btn" type="submit">Send</button>
+</form>
+
         </div>
       </section>
     </>
