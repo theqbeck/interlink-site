@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://interlink-site-1amx.vercel.app/sitemap.xml
