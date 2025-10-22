@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Главная страница -->
   <url>
     <loc>https://interlink-site-7tx6.vercel.app/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+
+    <!-- Превью-изображение для сниппетов -->
+    <image:image>
+      <image:loc>https://interlink-site-7tx6.vercel.app/images/pexels-aleksandar-pasaric-1388030.jpg</image:loc>
+      <image:title>Barcelona skyline at sunset</image:title>
+      <image:caption>Barcelona skyline at sunset</image:caption>
+    </image:image>
   </url>
+
 </urlset>
