@@ -10,45 +10,18 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://interlink-site-7tx6.vercel.app/"/>
 
+  <!-- PWA / UI -->
+  <meta name="theme-color" content="#6c59ff" />
+  <meta name="color-scheme" content="light only">
+
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Interlink" />
   <meta property="og:title" content="Interlink — Admissions, Visa & Relocation to Spain" />
   <meta property="og:description" content="End-to-end help with admissions, visas and relocation to Spain." />
   <meta property="og:url" content="https://interlink-site-7tx6.vercel.app/" />
   <meta property="og:image" content="https://interlink-site-7tx6.vercel.app/images/pexels-aleksandar-pasaric-1388030.jpg" />
   <meta property="og:image:alt" content="Barcelona skyline at sunset" />
-<!-- PWA / UI -->
-<meta name="theme-color" content="#6c59ff" />
-<meta name="color-scheme" content="light only">
-
-<!-- Structured Data (Organization + Website) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["Organization","WebSite"],
-  "name": "Interlink",
-  "url": "https://interlink-site-7tx6.vercel.app/",
-  "logo": "/images/interlink_logo_web.png",
-  "sameAs": [
-    "https://www.instagram.com/interlink_world/",
-    "https://www.youtube.com/@Interlink_world",
-    "https://www.tiktok.com/@interlink_world"
-  ],
-  "contactPoint": [{
-    "@type": "ContactPoint",
-    "telephone": "+34 635 994 844",
-    "contactType": "customer support",
-    "areaServed": "ES",
-    "availableLanguage": ["en","ru","es"]
-  }],
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://interlink-site-7tx6.vercel.app/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -62,20 +35,62 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="/images/pexels-aleksandar-pasaric-1388030.jpg" imagesrcset="/images/pexels-aleksandar-pasaric-1388030.jpg 1200w" />
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image"
+        href="/images/pexels-aleksandar-pasaric-1388030.jpg"
+        imagesrcset="/images/pexels-aleksandar-pasaric-1388030.jpg 1200w" />
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Interlink",
+    "url": "https://interlink-site-7tx6.vercel.app/",
+    "logo": "https://interlink-site-7tx6.vercel.app/images/interlink_logo_web.png",
+    "sameAs": [
+      "https://www.instagram.com/interlink_world/",
+      "https://www.youtube.com/@Interlink_world",
+      "https://www.tiktok.com/@interlink_world"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+34 635 994 844",
+      "contactType": "customer support",
+      "areaServed": "ES",
+      "availableLanguage": ["en","ru","es"]
+    }]
+  }
+  </script>
+
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://interlink-site-7tx6.vercel.app/",
+    "name": "Interlink — Admissions, Visa & Relocation to Spain",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://interlink-site-7tx6.vercel.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 
   <style>
+    /* WhatsApp floating button */
     .wa-fab{
-  position:fixed; right:16px; bottom:16px;
-  display:inline-grid; place-items:center;
-  width:52px; height:52px; border-radius:50%;
-  font-weight:800; color:#fff; text-decoration:none;
-  background:#25D366; box-shadow:0 10px 24px rgba(0,0,0,.18);
-}
-.wa-fab:hover{ transform:translateY(-2px); }
+      position:fixed; right:16px; bottom:16px;
+      display:inline-grid; place-items:center;
+      width:52px; height:52px; border-radius:50%;
+      font-weight:800; color:#fff; text-decoration:none;
+      background:#25D366; box-shadow:0 10px 24px rgba(0,0,0,.18);
+    }
+    .wa-fab:hover{ transform:translateY(-2px); }
 
     html { scroll-behavior: smooth; }
-
     :root {
       --ink:#1f284a;
       --violet:#6959d9;
@@ -89,6 +104,7 @@
       font-family: Helvetica, Arial, sans-serif;
       color: var(--ink);
       background: white;
+      line-height: 1.5;
     }
     a { color: var(--violet); text-decoration:none; }
     .container { width: min(1200px, 92%); margin: 0 auto; }
@@ -118,8 +134,7 @@
     header nav a.active { color:var(--violet); font-weight:700 }
 
     .hero {
-      background:
-        radial-gradient(1200px 380px at 50% -120px, #ecebff 0%, transparent 70%);
+      background: radial-gradient(1200px 380px at 50% -120px, #ecebff 0%, transparent 70%);
       padding: 4rem 0 5rem;
     }
     .grid { display:grid; gap: 2rem; }
@@ -130,7 +145,6 @@
       font-size:.75rem; padding:.35rem .6rem;
       background:#f3f4f6; color:#374151; border-radius:999px;
     }
-
 
     .hero__title { font-size: clamp(2.2rem, 4vw, 3.2rem); margin:.6rem 0 1.2rem; line-height:1.15; }
     .hero__subtitle { color: var(--muted); font-size:1.1rem; }
@@ -147,52 +161,48 @@
       background:#fff; box-shadow: 0 10px 30px rgba(31,40,74,.06);
     }
 
-    footer {
-      border-top:1px solid #eef; padding:2rem 0; color:var(--muted); text-align:center;
-    }
-
     .muted { color:var(--muted) }
-
     .section { padding: 3.2rem 0; }
     .list { padding-left: 1rem }
     .list li { margin:.35rem 0 }
 
     .notice { background: #f0f7ff; border:1px dashed #a5c2ff; padding:1rem; border-radius:12px; }
-/* contact form */
-.contact { padding: 3.2rem 0; }
-.contact .grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-.contact label { font-size:.9rem; color: var(--muted); display:block; margin-bottom:.35rem; }
-.contact input, .contact textarea {
-  width:100%; padding:.9rem 1rem; border:1px solid #e5e8ff; border-radius:12px;
-  font: inherit; color: var(--ink); background:#fff;
-}
-.contact input:focus, .contact textarea:focus { outline:none; border-color:#cfd5ff; box-shadow:0 0 0 3px #f1f3ff; }
-.contact .status { margin-top:.8rem; font-size:.95rem; }
-.site-footer { border-top:1px solid #eef; padding:2rem 0; color:var(--muted); }
-.site-footer .footer-top { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:.6rem; }
-.site-footer .footer-brand { color:var(--ink); }
-.site-footer .socials { display:flex; gap:1rem; flex-wrap:wrap; }
-.site-footer .socials a { color:var(--ink); font-weight:600; }
-.site-footer .socials a:hover { text-decoration:underline; }
-.site-footer .footer-contacts { display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; margin:.4rem 0 1rem; }
-.site-footer .footer-contacts a { color:var(--ink); }
-.site-footer .footer-copy { text-align:center; }
-@media (max-width:900px){
-  .site-footer .footer-top{ flex-direction:column; align-items:flex-start; }
-  .site-footer .footer-contacts{ justify-content:flex-start; }
-}
+
+    /* contact form */
+    .contact { padding: 3.2rem 0; }
+    .contact .grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .contact label { font-size:.9rem; color: var(--muted); display:block; margin-bottom:.35rem; }
+    .contact input, .contact textarea {
+      width:100%; padding:.9rem 1rem; border:1px solid #e5e8ff; border-radius:12px;
+      font: inherit; color: var(--ink); background:#fff;
+    }
+    .contact input:focus, .contact textarea:focus { outline:none; border-color:#cfd5ff; box-shadow:0 0 0 3px #f1f3ff; }
+    .contact .status { margin-top:.8rem; font-size:.95rem; }
+
+    /* footer */
+    .site-footer { border-top:1px solid #eef; padding:2rem 0; color:var(--muted); }
+    .site-footer .footer-top { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:.6rem; }
+    .site-footer .footer-brand { color:var(--ink); }
+    .site-footer .socials { display:flex; gap:1rem; flex-wrap:wrap; }
+    .site-footer .socials a { color:var(--ink); font-weight:600; }
+    .site-footer .socials a:hover { text-decoration:underline; }
+    .site-footer .footer-contacts { display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; margin:.4rem 0 1rem; }
+    .site-footer .footer-contacts a { color:var(--ink); }
+    .site-footer .footer-copy { text-align:center; }
 
     @media (max-width: 900px){
       .grid-2 { grid-template-columns: 1fr }
       .img-cover { height: 220px }
       header nav { display:none }
+      .site-footer .footer-top{ flex-direction:column; align-items:flex-start; }
+      .site-footer .footer-contacts{ justify-content:flex-start; }
     }
   </style>
 </head>
 <body>
 
   <!-- NAV -->
-  <header class="nav">
+  <header class="nav" role="navigation">
     <div class="container inner">
       <div class="logo">
         <img src="/images/interlink_logo_web.svg" alt="INTERLINK logo"/>
@@ -205,9 +215,7 @@
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
       </nav>
-     <a class="btn" href="https://calendly.com/studyinterlink/30min" target="_blank" rel="noopener">Book 30 min</a>
-
-
+      <a class="btn" href="https://calendly.com/studyinterlink/30min" target="_blank" rel="noopener">Book 30 min</a>
     </div>
   </header>
 
@@ -231,18 +239,26 @@
         </div>
 
         <div style="display:flex; gap:.8rem;">
-          <a class="btn" href="#book">Book a call</a>
+          <a class="btn" href="https://calendly.com/studyinterlink/30min" target="_blank" rel="noopener">Book a call</a>
           <a class="btn secondary" href="#services">See services</a>
         </div>
       </div>
 
       <div>
-        <img class="img-cover" src="/images/pexels-aleksandar-pasaric-1388030.jpg" alt="Barcelona skyline" />
+        <img
+          class="img-cover"
+          src="/images/pexels-aleksandar-pasaric-1388030.jpg"
+          alt="Barcelona skyline"
+          width="1200"
+          height="800"
+          decoding="async"
+          fetchpriority="high"
+        />
       </div>
     </div>
   </section>
 
-  <!-- CARDS -->
+  <!-- CARDS / lead blocks -->
   <section class="container grid" style="grid-template-columns:1fr 1fr; gap:1rem;">
     <div class="card">
       <h3>Get a free 15-min assessment</h3>
@@ -257,166 +273,167 @@
       <a class="btn secondary" href="#contact-form">Go to contact form ▸</a>
     </div>
   </section>
-<!-- CONTACT FORM -->
-<section id="contact-form" class="contact">
-  <div class="container">
-    <div class="card">
-      <h2 style="margin:0 0 .4rem">Tell us about your case</h2>
-      <p class="muted" style="margin:0 0 1rem">We’ll reply within 24 hours.</p>
 
-      <form id="fs-form" action="https://formspree.io/f/xdkwvwrq" method="POST" class="contact-form">
-        <div class="grid-2" style="margin-bottom:.9rem">
-          <div>
-            <label for="name">Your name</label>
-           <input id="name" name="name" type="text" placeholder="Your name" required aria-label="Your name" autocomplete="name">
+  <!-- CONTACT FORM -->
+  <section id="contact-form" class="contact">
+    <div class="container">
+      <div class="card">
+        <h2 style="margin:0 0 .4rem">Tell us about your case</h2>
+        <p class="muted" style="margin:0 0 1rem">We’ll reply within 24 hours.</p>
+
+        <form id="fs-form" action="https://formspree.io/f/xdkwvwrq" method="POST" class="contact-form" novalidate>
+          <div class="grid-2" style="margin-bottom:.9rem">
+            <div>
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required aria-label="Your name" autocomplete="name">
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="Email" required aria-label="Email" autocomplete="email">
+            </div>
           </div>
-          <div>
-            <label for="email">Email</label>
-           <input id="email" name="email" type="email" placeholder="Email" required aria-label="Email" autocomplete="email">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us briefly about your case…" required aria-label="Message"></textarea>
+
+          <!-- honeypot (anti-spam) -->
+          <input type="text" name="_gotcha" style="display:none">
+
+          <!-- subject for inbox convenience -->
+          <input type="hidden" name="_subject" value="New website inquiry">
+
+          <div style="display:flex; gap:.8rem; align-items:center; margin-top:.9rem">
+            <button class="btn" type="submit">Send</button>
+            <span id="fs-status" class="status muted" role="status" aria-live="polite"></span>
           </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="container grid" style="grid-template-columns:repeat(3, 1fr)">
+      <div class="card">
+        <h3>Admissions</h3>
+        <ul class="list muted">
+          <li>Language schools, colleges, universities</li>
+          <li>Program selection & documents</li>
+          <li>Application & enrollment support</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Visa & Residence</h3>
+        <ul class="list muted">
+          <li>Student visa / NLV</li>
+          <li>Appointment & paperwork</li>
+          <li>Translation & apostille guidance</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Relocation</h3>
+        <ul class="list muted">
+          <li>NIE, padrón, bank account</li>
+          <li>Health insurance</li>
+          <li>Housing intro pack</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="section">
+    <div class="container card">
+      <h3>How it works</h3>
+      <ol class="list muted">
+        <li><strong>Free assessment:</strong> you tell us your situation.</li>
+        <li><strong>Plan:</strong> we map out documents, timeline, costs.</li>
+        <li><strong>Execution:</strong> we guide you step by step until arrival.</li>
+      </ol>
+      <a class="btn" href="https://calendly.com/studyinterlink/30min" target="_blank" rel="noopener" style="margin-top:.6rem">Start with a free 15-min call</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section">
+    <div class="container grid" style="grid-template-columns:1fr 1fr; gap:1rem">
+      <div class="card">
+        <p class="muted">“Clear guidance and fast replies. Got my student visa in time and moved to Barcelona stress-free.”</p>
+        <p><strong>— Maria S.</strong></p>
+      </div>
+      <div class="card">
+        <p class="muted">“They handled the paperwork end-to-end. I only had to show up at appointments.”</p>
+        <p><strong>— Ahmed K.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="/images/interlink_logo_web.svg" alt="INTERLINK logo" style="height:28px;vertical-align:middle;margin-right:.5rem">
+          <strong>Interlink</strong>
         </div>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" placeholder="Tell us briefly about your case…" required aria-label="Message"></textarea>
-
-        <!-- honeypot (anti-spam) -->
-        <input type="text" name="_gotcha" style="display:none">
-
-        <!-- subject для удобства в почте -->
-        <input type="hidden" name="_subject" value="New website inquiry">
-
-        <div style="display:flex; gap:.8rem; align-items:center; margin-top:.9rem">
-          <button class="btn" type="submit">Send</button>
-          <span id="fs-status" class="status muted" role="status" aria-live="polite"></span>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-<!-- SERVICES -->
-<section id="services" class="section">
-  <div class="container grid" style="grid-template-columns:repeat(3, 1fr)">
-    <div class="card">
-      <h3>Admissions</h3>
-      <ul class="list muted">
-        <li>Language schools, colleges, universities</li>
-        <li>Program selection & documents</li>
-        <li>Application & enrollment support</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Visa & Residence</h3>
-      <ul class="list muted">
-        <li>Student visa / NLV</li>
-        <li>Appointment & paperwork</li>
-        <li>Translation & apostille guidance</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Relocation</h3>
-      <ul class="list muted">
-        <li>NIE, padrón, bank account</li>
-        <li>Health insurance</li>
-        <li>Housing intro pack</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section id="how" class="section">
-  <div class="container card">
-    <h3>How it works</h3>
-    <ol class="list muted">
-      <li><strong>Free assessment:</strong> you tell us your situation.</li>
-      <li><strong>Plan:</strong> we map out documents, timeline, costs.</li>
-      <li><strong>Execution:</strong> we guide you step by step until arrival.</li>
-    </ol>
-    <a class="btn" href="#contact-form" style="margin-top:.6rem">Start with a free 15-min call</a>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials" class="section">
-  <div class="container grid" style="grid-template-columns:1fr 1fr; gap:1rem">
-    <div class="card">
-      <p class="muted">“Clear guidance and fast replies. Got my student visa in time and moved to Barcelona stress-free.”</p>
-      <p><strong>— Maria S.</strong></p>
-    </div>
-    <div class="card">
-      <p class="muted">“They handled the paperwork end-to-end. I only had to show up at appointments.”</p>
-      <p><strong>— Ahmed K.</strong></p>
-    </div>
-  </div>
-</section>
-
-  <footer>
-   <footer class="site-footer">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <img src="/images/interlink_logo_web.svg" alt="INTERLINK logo" style="height:28px;vertical-align:middle;margin-right:.5rem">
-        <strong>Interlink</strong>
+        <nav class="socials" aria-label="Social links">
+          <a href="https://www.instagram.com/interlink_world/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.youtube.com/@Interlink_world" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://www.tiktok.com/@interlink_world" target="_blank" rel="noopener">TikTok</a>
+        </nav>
       </div>
 
-      <nav class="socials" aria-label="Social links">
-        <a href="https://www.instagram.com/interlink_world/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.youtube.com/@Interlink_world" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://www.tiktok.com/@interlink_world" target="_blank" rel="noopener">TikTok</a>
-      </nav>
+      <div class="footer-contacts">
+        <a href="mailto:studyinterlink@gmail.com">studyinterlink@gmail.com</a>
+        <span>·</span>
+        <a href="tel:+34635994844">+34 635 994 844</a>
+        <span>·</span>
+        <a href="https://wa.me/34635994844" target="_blank" rel="noopener">WhatsApp</a>
+        <span>·</span>
+        <a href="https://calendly.com/studyinterlink/30min" target="_blank" rel="noopener">Book 30 min</a>
+      </div>
+
+      <div class="footer-copy">
+        © <span id="y"></span> Interlink. All rights reserved.
+      </div>
     </div>
-
-    <div class="footer-contacts">
-      <a href="mailto:studyinterlink@gmail.com">studyinterlink@gmail.com</a>
-      <span>·</span>
-      <a href="tel:+34635994844">+34 635 994 844</a>
-      <span>·</span>
-      <a href="https://wa.me/34635994844" target="_blank" rel="noopener">WhatsApp</a>
-      <span>·</span>
-      <a href="https://calendly.com/studyinterlink/30min" target="_blank" rel="noopener">Book 30 min</a>
-    </div>
-
-    <div class="footer-copy">
-      © <span id="y"></span> Interlink. All rights reserved.
-    </div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-</script>
-
   </footer>
 
+  <!-- Year + Form handler -->
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-  <script>
-  (function(){
-    const form = document.getElementById('fs-form');
-    const status = document.getElementById('fs-status');
-    if(!form) return;
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      status.textContent = 'Sending…';
+    (function () {
+      const form = document.getElementById('fs-form');
+      const status = document.getElementById('fs-status');
+      if (!form) return;
 
-      try {
-        const data = new FormData(form);
-        const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' }});
-        if (res.ok) {
-          form.reset();
-          status.textContent = 'Thanks! We will get back to you within 24h.';
-        } else {
-          status.textContent = 'Oops, something went wrong. Please try again or email us.';
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (status) status.textContent = 'Sending…';
+
+        try {
+          const data = new FormData(form);
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            form.reset();
+            if (status) status.textContent = 'Thanks! We will get back to you within 24h.';
+          } else {
+            if (status) status.textContent = 'Oops, something went wrong. Please try again or email us.';
+          }
+        } catch (err) {
+          if (status) status.textContent = 'Network error. Please try again.';
         }
-      } catch (err) {
-        status.textContent = 'Network error. Please try again.';
-      }
-    });
-  })();
-</script>
-<a class="wa-fab" href="https://wa.me/34635994844" target="_blank" rel="noopener" aria-label="WhatsApp chat">WA</a>
+      });
+    })();
+  </script>
 
+  <!-- WhatsApp FAB -->
+  <a class="wa-fab" href="https://wa.me/34635994844" target="_blank" rel="noopener" aria-label="WhatsApp chat">WA</a>
 </body>
 </html>
