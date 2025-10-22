@@ -1,11 +1,27 @@
 {
-  "name": "Interlink",
+  "name": "Interlink — Admissions, Visa & Relocation to Spain",
   "short_name": "Interlink",
-  "icons": [
-    { "src": "/images/interlink_logo_web.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
-    { "src": "/images/interlink_logo_web.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
-  ],
-  "theme_color": "#6c59ff",
+  "description": "From language schools to universities, NLV/Student visas and residence — Interlink guides you end-to-end and keeps you calm. Barcelona-based team.",
+  "start_url": "/",
+  "display": "standalone",
   "background_color": "#ffffff",
-  "display": "standalone"
+  "theme_color": "#6c59ff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/images/interlink_logo_web.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/interlink_logo_web.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/interlink_logo_web.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
 }
