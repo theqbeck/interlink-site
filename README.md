@@ -1,52 +1,48 @@
-# Interlink Website
+# 🌍 Interlink — Admissions, Visa & Relocation to Spain
 
-Move to Spain the Smart Way — admissions, visas, relocation.
+**Interlink** helps international students and professionals move to Spain the smart way.  
+From **language schools** to **universities**, **NLV/Student visas**, and **residence renewals**,  
+our Barcelona-based team guides you **end-to-end** — calm, clear, and stress-free.
 
-## ▶️ Quick start
+---
 
-```bash
-# 1) Install deps
-npm i
+## 🚀 Website
+🔗 **Live site:** [interlink-site-7tx6.vercel.app](https://interlink-site-7tx6.vercel.app)
 
-# 2) Run local dev
-npm run dev
+---
 
-# 3) Build for production
-npm run build
-```
+## 💼 Services
+- Spanish Language Courses (for visas or renewal)
+- Admissions and documentation support
+- Legal assistance for visa and residence applications
+- Relocation & accommodation help
+- Free 15-minute consultation
 
-## 📩 Lead form (Kommo + Google Sheets + Email)
+---
 
-The form posts to a Google Apps Script endpoint (already connected to your Kommo integration and Google Sheets).  
-Webhook URL is configured inside `src/components/LeadForm.jsx`:
+## 📅 Book a Call
+Schedule a free 30-minute consultation on Calendly:  
+👉 [calendly.com/studyinterlink/30min](https://calendly.com/studyinterlink/30min)
 
-```
-https://script.google.com/macros/s/AKfycbzeUtEkipy-f8Goa0keMGjG0yb76--jovBLFWdJJHH23acSi2nyZ7mjDCUTEflSxtie/exec
-```
+---
 
-You can change it there anytime.
+## 📱 Connect
+- 🌐 Instagram: [@interlink_world](https://www.instagram.com/interlink_world)
+- 🎥 YouTube: [Interlink World](https://www.youtube.com/@Interlink_world)
+- 🎵 TikTok: [@interlink_world](https://www.tiktok.com/@interlink_world)
+- 💬 WhatsApp: [+34 635 994 844](https://wa.me/34635994844)
+- 📧 Email: [studyinterlink@gmail.com](mailto:studyinterlink@gmail.com)
 
-## 🚀 Deploy
+---
 
-- **Vercel** (recommended): Import this repo → Framework: Vite → Build command `npm run build` → Output dir `dist`.
-- **GitHub Pages** (static): `npm run build` and publish `/dist` folder.
+## 🧭 Tech Stack
+- HTML5, CSS3, JS (static Vite build)
+- Hosted on **Vercel**
+- Form handling via **Formspree**
+- SEO optimized (`robots.txt`, `sitemap.xml`, `manifest`, `Open Graph`)
 
-## 🧭 Pages
+---
 
-- `/` Home
-- `/services`
-- `/how-it-works`
-- `/testimonials`
-- `/blog` (placeholder)
-- `/about`
-- `/contact`
-
-## 📁 Assets
-
-Brand logo and Barcelona photos are in `/public/images/`:
-- interlink_logo_web.png
-- interlink_logo_web.svg
-- pexels-aleksandar-pasaric-1388030.jpg
-- pexels-ken-cheung-11025841.jpg
-- dennis-van-den-worm-RoM8ocpgBkI-unsplash.jpg
-- miguel-baixauli-Dw-0Sic6dgU-unsplash.jpg
+## 👨‍💻 Maintained by
+**Daniil Onishchenko** — Founder, Interlink  
+📍 Barcelona, Spain
