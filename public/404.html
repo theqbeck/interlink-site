@@ -4,71 +4,82 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Page not found — Interlink</title>
+  <title>Page not found (404) — Interlink</title>
+  <!-- 404 pages should not be indexed, but can pass link equity forward -->
   <meta name="robots" content="noindex,follow" />
-  <link rel="canonical" href="https://interlink-site-7tx6.vercel.app/" />
 
-  <!-- App identity -->
+  <!-- Brand / PWA -->
   <link rel="icon" type="image/png" href="/images/interlink_logo_web.png" />
   <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#6c59ff" />
 
   <style>
-    :root{ --ink:#1f284a; --violet:#6959d9; --muted:#6b7280; }
-    *{ box-sizing:border-box }
-    html,body{ height:100%; margin:0 }
+    :root{
+      --ink:#1f284a;
+      --muted:#6b7280;
+      --violet:#6959d9;
+      --bg:#f7f7fb;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
     body{
       font-family: Helvetica, Arial, sans-serif;
+      color:var(--ink);
       background:
         radial-gradient(1200px 380px at 50% -120px, #ecebff 0%, transparent 70%),
-        #fff;
-      color:var(--ink);
+        var(--bg);
       display:grid;
       place-items:center;
       padding:2rem;
     }
+    .wrap{width:min(780px,96%)}
     .card{
-      width:min(720px, 92%);
       background:#fff;
       border:1px solid #eef;
       border-radius:18px;
-      box-shadow:0 10px 30px rgba(31,40,74,.06);
-      padding:2rem;
-      text-align:center;
+      box-shadow:0 12px 30px rgba(31,40,74,.06);
+      padding:1.6rem;
     }
-    h1{ font-size:clamp(1.8rem, 3.5vw, 2.6rem); margin:.2rem 0 1rem }
-    p{ color:var(--muted); margin:.4rem 0 1.1rem }
-    .btn{
-      display:inline-flex; align-items:center; gap:.5rem;
-      padding:.9rem 1.2rem; border-radius:12px;
-      background:linear-gradient(135deg, var(--violet), #8c69ff);
-      color:#fff; font-weight:600; text-decoration:none;
-      box-shadow:0 12px 30px rgba(111,89,217,.35);
-      transition:transform .08s ease;
-    }
-    .btn:hover{ transform:translateY(-2px) }
-    .links{ display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap; margin-top:.6rem }
-    .btn.secondary{ background:#fff; color:var(--violet); border:1px solid #e5e7eb; box-shadow:none }
     .logo{
-      display:flex; justify-content:center; align-items:center; gap:.5rem; font-weight:800; letter-spacing:.4px; margin-bottom:.4rem
+      display:flex;align-items:center;gap:.6rem;
+      font-weight:800;letter-spacing:.4px;margin-bottom:.6rem;
     }
-    .logo img{ height:32px; width:auto }
-    .muted{ color:var(--muted) }
+    .logo img{height:32px;width:auto}
+    h1{font-size:clamp(1.6rem,3.5vw,2.2rem);margin:.2rem 0 0}
+    p{color:var(--muted);margin:.6rem 0 1rem}
+    .links{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+    .btn{
+      display:inline-flex;align-items:center;gap:.4rem;
+      padding:.8rem 1rem;border-radius:12px;border:1px solid #e5e7eb;
+      background:#fff;color:var(--ink);text-decoration:none;font-weight:600;
+      box-shadow:0 2px 8px rgba(31,40,74,.06);
+      transition:transform .08s ease, box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(31,40,74,.12)}
+    .btn.primary{
+      background:linear-gradient(135deg, var(--violet), #8c69ff);
+      color:#fff;border-color:transparent;box-shadow:0 12px 30px rgba(111,89,217,.35);
+    }
+    .muted{color:var(--muted)}
   </style>
 </head>
 <body>
-  <main class="card" role="main">
-    <div class="logo">
-      <img src="/images/interlink_logo_web.svg" alt="INTERLINK logo" />
-      INTERLINK
-    </div>
+  <main class="wrap" role="main" aria-labelledby="title">
+    <div class="card">
+      <div class="logo">
+        <img src="/images/interlink_logo_web.svg" alt="INTERLINK logo" />
+        INTERLINK
+      </div>
 
-    <h1>Oops — page not found (404)</h1>
-    <p class="muted">The link may be broken or the page may have been moved.</p>
+      <h1 id="title">Oops — page not found (404)</h1>
+      <p class="muted">The link may be broken or the page has been moved.</p>
 
-    <div class="links">
-      <a class="btn" href="/">Go to homepage</a>
-      <a class="btn secondary" href="https://calendly.com/studyinterlink/30min" target="_blank" rel="noopener">Book 30 min</a>
-      <a class="btn secondary" href="mailto:studyinterlink@gmail.com">Contact support</a>
+      <nav class="links" aria-label="Helpful links">
+        <a class="btn primary" href="/">Go to homepage</a>
+        <a class="btn" href="https://calendly.com/studyinterlink/30min" target="_blank" rel="noopener">Book 30 min</a>
+        <a class="btn" href="mailto:studyinterlink@gmail.com">Contact support</a>
+        <a class="btn" href="https://wa.me/34635994844" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
     </div>
   </main>
 </body>
